@@ -74,10 +74,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     headers: { "Content-Type": "application/json; charset=UTF-8" },
                     body: JSON.stringify(split[2]),
                 }).catch((error) => console.error("Error:", error));
-                targetLabel.textContent = "";
+                CloseTarget();
             }
         }
-        if (event.button === 2) {
+        if (event.button === 2 && !targetLabel.contains(event.target)) {
             LeftTarget();
             fetch(`https://${GetParentResourceName()}/leftTarget`, {
                 method: "POST",

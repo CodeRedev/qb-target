@@ -74,7 +74,9 @@ body {
     background: var(--md-surface-container-high);
     color: var(--md-on-surface);
     box-shadow: var(--md-elevation-1);
-    transition: transform 0.3s ease, background-color 0.2s ease;
+    transition:
+        transform 0.3s ease,
+        background-color 0.2s ease;
 }
 
 [id^="target-option-"]:hover {

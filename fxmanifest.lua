@@ -14,15 +14,17 @@ client_scripts {
 	'@PolyZone/EntityZone.lua',
 	'@PolyZone/CircleZone.lua',
 	'@PolyZone/ComboZone.lua',
-	'init.lua',
+	'config.lua',
 	'client.lua',
+	'registration.lua',
+	'peds.lua',
 }
 
 files {
 	'data/*.lua',
 	'html/*.html',
-	'html/css/*.css',
-	'html/js/*.js'
+	'html/*.css',
+	'html/*.js'
 }
 
 dependency 'PolyZone'
