@@ -633,7 +633,7 @@ end)
 -- QBCore init
 
 CreateThread(function()
-	QBCore = exports['qb-core']:GetCoreObject()
+	QBCore = exports['qb-core']:GetCoreObject({ 'Functions' })
 	PlayerData = QBCore.Functions.GetPlayerData()
 	ItemCheck = QBCore.Functions.HasItem
 
@@ -682,16 +682,16 @@ RegisterNetEvent('QBCore:Client:OnPlayerUnload', function()
 	DeletePeds()
 end)
 
-RegisterNetEvent('QBCore:Client:OnJobUpdate', function(JobInfo)
-	PlayerData.job = JobInfo
-end)
-
-RegisterNetEvent('QBCore:Client:OnGangUpdate', function(GangInfo)
-	PlayerData.gang = GangInfo
-end)
-
-RegisterNetEvent('QBCore:Player:SetPlayerData', function(val)
-	PlayerData = val
+RegisterNetEvent('QBCore:Client:OnPlayerUpdated', function(key, val)
+	if key == 'job' then
+		local JobInfo = val
+		PlayerData.job = JobInfo
+	elseif key == 'gang' then
+		local GangInfo = val
+		PlayerData.gang = GangInfo
+	elseif key == 'all' then
+		PlayerData = val
+	end
 end)
 
 -- Events
