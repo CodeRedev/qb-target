@@ -16,6 +16,7 @@ client_scripts {
 	'@PolyZone/ComboZone.lua',
 	'config.lua',
 	'client.lua',
+	'studio.lua',
 	'registration.lua',
 	'peds.lua',
 }
