@@ -40,6 +40,8 @@ Config.OpenKey = 'LMENU' -- Left Alt
 -- Whether to disable ALL controls or only specificed ones
 Config.DisableControls = true
 
+Config.StudioCommand = 'targetstyle' -- Command to open the studio, can be changed to whatever you want
+
 -------------------------------------------------------------------------------
 -- Target Configs
 -------------------------------------------------------------------------------
